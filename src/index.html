@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Levi O. Oguike">
+    <meta name="description" content="Taste Tradition is a community-driven recipe hub that connects people across the globe with traditional dishes from various cultures. Taste Tradition allows users to discover, share, and celebrate the heritage behind their favorite local meals. Built with a focus on storytelling, food, and cultural preservation.">
+
+    <meta property="og:title" content="Taste Tradition">
+    <meta property="og:description" content="Taste Tradition is a global food and recipe hub designed to connect people across the world through traditional cuisine. Whether you're looking to explore authentic dishes, learn about the cultural history behind them, or share your own family recipes, Taste Tradition is the perfect platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="Taste Tradition ">
+    <title>Taste-tradition</title>
+
+    <link rel="icon" href="images/favicon.svg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Condiment&family=Cookie&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="scripts/hamburger.js" defer></script>
+</head>
+<body>
+      <header>
+        <div class="logo">Taste-Tradition</div>
+        <button class="menu-toggle" id="menu-toggle" title="Toggle Menu"></button>
+        <nav id="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#recipes">Global Recipes</a>
+            <a href="#Blog">Blog</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button type="submit" class="search-button" aria-label="Search">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="account-btn"aria-label="Account Menu">
+            <i class="fas fa-user"></i>
+        </button>        
+      </header>
+      <main>
+        <picture>
+            <!-- Mobile view (default for small screens) -->
+            <source media="(max-width: 599px)" srcset="images/hero-mobile.webp" type="image/webp">
+            
+            <!-- Tablet view -->
+            <source media="(min-width: 600px) and (max-width: 1023px)" srcset="images/hero-tablet.webp" type="image/webp">
+            
+            <!-- Desktop view -->
+            <source media="(min-width: 1024px)" srcset="images/hero-desktop.webp" type="image/webp">
+          
+            <!-- Fallback image if none of the above match -->
+            <img src="images/banner-desktop.jpg" alt="Various seasonings and spices displayed on a wooden surface" style="width: 100%; height: auto;">
+          </picture>
+          <section class="carousel-section">
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <div class="carousel-slide 1">
+                    <h3>Discover Authentic Flavors</h3>
+                    <p>Dive into the rich world of traditional cooking where every dish tells a story. From the spicy jollof of West Africa to the comforting pho of Vietnam, Taste Tradition reconnects you with the flavors that shaped generations. Whether you're cooking for the first time or reviving a family favorite, our step-by-step guides help you recreate the real taste — just like grandma used to make.</p>
+                    <button>Explore Recipes</button>
+                </div>
+                <div class="carousel-slide 2">
+                    <h3>Global Recipes, Local Taste</h3>
+                    <p>Why stick to the usual when you can explore the world through food? Taste Tradition brings together diverse recipes from every continent — Asia, Africa, Europe, the Americas, and beyond. No matter where you’re from or what you’re craving, there’s a dish waiting to surprise your taste buds and bring cultures closer to your kitchen.</p>
+                    <button>Start Cooking</button>
+                </div>
+                <div class="carousel-slide 3">
+                    <h3>Made with Stories</h3>
+                    <p>Taste Tradition isn’t just about food — it’s about the lives behind the recipes. Each meal we feature comes from real families, real celebrations, and real traditions. Learn how a humble soup became a national symbol, or how street food carries the spirit of a community. Let every bite remind you of home — or help you discover a new one.</p>
+                    <button>Learn More</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        <div class="carousal">
+            <!-- <h2>Discover Global Flavors</h2> -->
+        
+            <div class="flip" data-modal="africaModal">
+                <div class="flip-front">
+                    <img src="images/africa.png" alt="Africa" loading="lazy">
+                    <h3>Africa</h3>
+                </div>
+            </div>
+            <div class="flip" data-modal="asiaModal">
+                <div class="flip-front">
+                    <img src="images/asia.png" alt="Asia" loading="lazy">
+                    <h3>Asia</h3>
+                </div>
+            </div>
+            <div class="flip" data-modal="europeModal">
+                <div class="flip-front">
+                    <img src="images/europe.jpg" alt="Europe" loading="lazy">
+                    <h3>Europe</h3>
+                </div>
+            </div>
+            <div class="flip" data-modal="americaModal">
+                <div class="flip-front">
+                    <img src="images/america.jpg" alt="America" loading="lazy">
+                    <h3>America</h3>
+                </div>
+            </div>
+            <div class="flip" data-modal="australiaModal">
+                <div class="flip-front">
+                    <img src="images/australia.jpg" alt="Australia" loading="lazy">
+                    <h3>Australia</h3>
+                </div>
+            </div>
+        
+            <!-- Modal for Africa -->
+            <div class="modal" id="africaModal">
+                <div class="modal-content">
+                    <span class="close" data-modal="africaModal">&times;</span>
+                    <h3>Africa</h3>
+                    <p>Africa is a vibrant tapestry of cultures, languages, and traditions, each weaving its unique rhythm into the continent's rich heritage. From the pulsating beats of West African drums to the intricate beadwork of Maasai artisans, Africa's spirit shines through its music, dance, art, and festivals. Culinary delights like Jollof rice, tagine, and injera offer a taste of the continent's diverse flavors, while traditional ceremonies and storytelling celebrate the deep connections between past and present. In every corner of Africa, the beauty of its people and their customs tell a story of resilience, creativity, and boundless joy. 🌍🎶🍲</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        
+            <!-- Modal for Asia -->
+            <div class="modal" id="asiaModal">
+                <div class="modal-content">
+                    <span class="close" data-modal="asiaModal">&times;</span>
+                    <h3>Asia</h3>
+                    <p>Asia is a captivating continent where ancient traditions meet modern innovations. From the vibrant streets of Tokyo and the serene temples of Kyoto, to the bustling markets of Delhi and the tranquil rice paddies of Bali, Asia is a land of contrasts and harmony. Its cuisine tantalizes the taste buds with bold spices, delicate flavors, and intricate cooking techniques, while its cultural festivals, such as Diwali and Chinese New Year, offer a glimpse into the rich heritage of its people. Whether you're exploring historical landmarks like the Great Wall of China or enjoying the natural beauty of the Himalayas, Asia's diversity and dynamism promise an unforgettable experience. 🌏🎎🍣 </p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        
+            <!-- Modal for Europe -->
+            <div class="modal" id="europeModal">
+                <div class="modal-content">
+                    <span class="close" data-modal="europeModal">&times;</span>
+                    <h3>Europe</h3>
+                    <p>Europe is a dazzling mosaic of cultures, where medieval castles stand beside modern marvels, and bustling markets share space with serene vineyards. From the romantic canals of Venice and the historic streets of Paris, to the vibrant energy of Barcelona and the picturesque landscapes of the Swiss Alps, Europe offers a journey through time and tradition. Savor delectable dishes like Italian pasta, French pastries, and Spanish tapas, each bite telling a story of its region's rich culinary heritage. With festivals that light up the night and landmarks that take your breath away, Europe's charm and elegance promise an unforgettable adventure. 🌍🍝🎭</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        
+            <!-- Modal for America -->
+            <div class="modal" id="americaModal">
+                <div class="modal-content">
+                    <span class="close" data-modal="americaModal">&times;</span>
+                    <h3>America</h3>
+                    <p>America, as a continent, is a vibrant tapestry of cultures, landscapes, and histories stretching from the frozen tundras of Canada to the tropical rainforests of Brazil. North, Central, and South America together offer an astonishing diversity of experiences. Whether it's the iconic cities like New York and Los Angeles, the ancient ruins of Machu Picchu and Chichen Itza, or the stunning natural wonders like the Rocky Mountains and the Amazon Rainforest, the Americas are a treasure trove of exploration. The continent's cuisine is equally diverse, featuring everything from hearty steaks and clam chowder in the north to spicy tacos and arepas in the south. Celebrations like Mardi Gras in New Orleans, Carnival in Rio de Janeiro, and Day of the Dead in Mexico showcase the rich cultural heritage and communal spirit. With a blend of modern innovation and deep-rooted traditions, America as a continent is a land of endless adventure and discovery. 🌎🌮🌳</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        
+            <!-- Modal for Australia -->
+            <div class="modal" id="australiaModal">
+                <div class="modal-content">
+                    <span class="close" data-modal="australiaModal">&times;</span>
+                    <h3>Australia</h3>
+                    <p>Australia, a continent of stunning contrasts, is where the outback meets vibrant cities, and ancient cultures blend with modern living. From the iconic Sydney Opera House and the Great Barrier Reef's underwater wonders, to the rugged beauty of the Outback and the pristine beaches of the Gold Coast, Australia offers a myriad of experiences. Its unique wildlife, including kangaroos and koalas, adds to the country's charm. Australian cuisine celebrates its multicultural heritage with dishes like Vegemite, pavlova, and a good old-fashioned BBQ. The continent's laid-back lifestyle and warm hospitality invite you to explore its vast landscapes and discover its rich Aboriginal heritage. Australia's boundless beauty and adventurous spirit promise an unforgettable journey. 🌏🦘🏖️</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <section>
+                <img src="images/Nigeria-food.avif" alt="Nigeria food" loading="lazy">
+            </section>
+            <section class="about-section">
+                <h3>Tastes That Tell Stories</h3>
+                <p>At Taste Tradition, we’re more than just recipes — we’re storytellers of flavor. Every dish we share carries the soul of a people, the rhythm of generations, and the warmth of home. From simmering stews to festive street food, we bring you authentic traditional meals from around the world, passed down through families and cultures. Whether you’re discovering your roots or exploring new ones, our mission is to connect you to heritage through taste. Savor the flavors of history, culture, and community — because at Taste Tradition, every bite tells a story.</p>
+                <button>Read More</button>
+        </div>
+        <div>
+            <div class="testimony">
+                <img src="images/jenni.jpg" alt="Chloe J" loading="lazy">
+                <p>As someone who loves exploring different cuisines, Taste Tradition has been a game-changer! I recently tried making authentic Nigerian Jollof Rice, and the step-by-step recipe made it so easy. Highly recommend for any food lover! <span>- Chloe J., United State
+                </span></p>
+            </div>
+            <div class="testimony">
+                <img src="images/ella.jpg" alt=" Maria D " loading="lazy">
+                <p>I never thought I’d be able to recreate my grandmother’s paella the way she did, but Taste Tradition helped me find the perfect recipe! This platform keeps cultural flavors alive, and I love discovering dishes from other countries too!
+                <span>- Maria D., Spain 
+                </span></p>
+            </div>
+            <div class="testimony">
+                <img src="images/grace.webp" alt="  Aisha R " loading="lazy">
+                <p>I grew up eating traditional Moroccan dishes, and I’m so happy to share them with the world through this platform! It’s amazing to see people from different backgrounds learning and appreciating our rich food culture.
+                <span>-  Aisha R., Morocco ,  
+                </span></p>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+    
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Recipe Submission Guide</a></li>
+                    <li><a href="#">Site Feedback</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+    
+            <!-- Help -->
+            <div class="footer-section">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Copyright & Attribution</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Report an Issue</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Signup -->
+            <div class="footer-section newsletter">
+                <h4>Stay Updated</h4>
+                <p>Never miss a recipe! Get weekly traditional food inspirations in your inbox.</p>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h4>Connect with Taste Tradition</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+                    <a href="#"><i class="fab fa-twitter"></i> X</a>
+                    <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+        </div>
+    
+        <p class="footer-copyright">© <span id="year"></span> Taste Tradition. All Rights Reserved.</p>
+      </footer>
+      
+</body>
+</html>

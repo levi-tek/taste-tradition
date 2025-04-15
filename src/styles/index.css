@@ -1,0 +1,150 @@
+/* Base styles: Mobile-first (Default < 576px) */
+body {
+  width: 100vw;
+}
+header {
+  width: 100vw;
+  height: auto;
+  overflow: visible;
+  padding: 22px;
+  top: 0;
+  left:0%;
+  background:  #130c0c;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}    
+.logo {
+  font-family: 'pacifico', cursive;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  margin-left: 65px;
+  position: absolute;
+  top: 5px;
+}
+.menu-toggle {
+  position: absolute;
+  margin-left: 3%;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  top: 5px;
+  cursor: pointer;
+}
+.search-button {
+  position: absolute;
+  margin-left: 70%;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  top: 5px;
+  cursor: pointer;
+}
+.account-btn {
+  position: absolute;
+  margin-left: 80%;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  top: 5px;
+  cursor: pointer;
+}
+#menu-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 3px;
+}
+#menu-toggle::before{
+  content: '☰';
+}
+#menu-toggle.open::before{
+  content: '✖';
+}
+
+#nav-menu{
+  display: none;
+  
+
+}
+#nav-menu.open{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #130c0c;
+  border-top-left-radius: 10px;
+}
+#nav-menu.open a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.rem;
+  margin: 5px 0;
+}
+/* Navigation Menu Open State */
+/* #nav-links {
+  display: none;
+  position: absolute;
+}
+
+
+.menu-toggle.open {
+  content: ;
+}
+.nav-links {
+  list-style: none;
+
+}
+Small devices (≥576px) */
+@media (min-width: 576px) {
+  /* Styles for small screens like larger phones */
+
+  body {
+    display: none;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  /* Styles for tablets */
+
+  body {
+    display: none;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  /* Styles for desktops */
+
+  body {
+    display: none;
+  }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+
+  body {
+    display: none;
+  }
+}
+
+/* Extra extra large devices (≥1400px) */
+@media (min-width: 1400px) {
+  /* Styles for very wide screens */
+
+  body {
+    display: none;
+  }
+}
