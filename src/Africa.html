@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Levi O. Oguike">
+    <meta name="description" content="Taste Tradition is a community-driven recipe hub that connects people across the globe with traditional dishes from various cultures. Taste Tradition allows users to discover, share, and celebrate the heritage behind their favorite local meals. Built with a focus on storytelling, food, and cultural preservation.">
+
+    <meta property="og:title" content="Taste Tradition">
+    <meta property="og:description" content="Taste Tradition is a global food and recipe hub designed to connect people across the world through traditional cuisine. Whether you're looking to explore authentic dishes, learn about the cultural history behind them, or share your own family recipes, Taste Tradition is the perfect platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="Taste Tradition ">
+    <title>Taste-tradition</title>
+
+    <link rel="icon" href="images/favicon.svg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/africa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Condiment&family=Cookie&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="scripts/hamburger.js" defer></script>
+<script src="scripts/index.js" defer></script>
+<script src="scripts/africa.js" defer></script>
+</head>
+<body>
+      <header>
+        <div class="logo">Taste-Tradition</div>
+        <button class="menu-toggle" id="menu-toggle" title="Toggle Menu"></button>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <div class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle">Global Recipes ▾</button>
+                <div class="dropdown-content" id="continentDropdown">
+                  <a href="Africa.html" data-continent="Africa">Africa</a>
+                  <a href="Asia.html" data-continent="Asia">Asia</a>
+                  <a href="Europe.html" data-continent="Europe">Europe</a>
+                  <a href="NorthAmerica.html" data-continent="North America">North America</a>
+                  <a href="SouthAmerica.html" data-continent="South America">South America</a>
+                </div>
+              </div>                  
+            <a href="#Blog">Blog</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <input type="text" id="search-box" placeholder="Search for recipes or ingredients" aria-label="Search">
+        <button type="submit" class="search-button" aria-label="Search" onclick="toggleSearchBox()">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="account-btn"aria-label="Account Menu">
+            <i class="fas fa-user"></i>
+        </button>        
+      </header>
+      <main>
+        <div class="africa"></div>
+      </main>
+      <footer>
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+    
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Recipe Submission Guide</a></li>
+                    <li><a href="#">Site Feedback</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+    
+            <!-- Help -->
+            <div class="footer-section">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Copyright & Attribution</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Report an Issue</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Signup -->
+            <div class="footer-section newsletter">
+                <h4>Stay Updated</h4>
+                <p>Never miss a recipe! Get weekly traditional food inspirations in your inbox.</p>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h4>Connect with Taste Tradition</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+                    <a href="#"><i class="fab fa-twitter"></i> X</a>
+                    <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+            </div>
+        </div>
+    
+        <p class="footer-copyright">© <span id="year"></span> Taste Tradition. All Rights Reserved.</p>
+      </footer>

@@ -21,19 +21,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Condiment&family=Cookie&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="scripts/hamburger.js" defer></script>
+<script src="scripts/index.js" defer></script>
 </head>
 <body>
       <header>
         <div class="logo">Taste-Tradition</div>
         <button class="menu-toggle" id="menu-toggle" title="Toggle Menu"></button>
         <nav id="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#recipes">Global Recipes</a>
+            <a href="index.html">Home</a>
+            <div class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle">Global Recipes ▾</button>
+                <div class="dropdown-content" id="continentDropdown">
+                  <a href="Africa.html" data-continent="Africa">Africa</a>
+                  <a href="Asia.html" data-continent="Asia">Asia</a>
+                  <a href="Europe.html" data-continent="Europe">Europe</a>
+                  <a href="NorthAmerica.html" data-continent="North America">North America</a>
+                  <a href="SouthAmerica.html" data-continent="South America">South America</a>
+                </div>
+              </div>              
             <a href="#Blog">Blog</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
-        <button type="submit" class="search-button" aria-label="Search">
+        <input type="text" id="search-box" placeholder="Search for recipes or ingredients" aria-label="Search">
+        <button type="submit" class="search-button" aria-label="Search" onclick="toggleSearchBox()">
             <i class="fas fa-search"></i>
         </button>
         <button class="account-btn"aria-label="Account Menu">
@@ -54,7 +65,8 @@
             <!-- Fallback image if none of the above match -->
             <img src="images/banner-desktop.jpg" alt="Various seasonings and spices displayed on a wooden surface" style="width: 100%; height: auto;">
           </picture>
-          <section class="carousel-section">
+          <div id="mealResults"></div>
+          <!-- <section class="carousel-section">
             <div class="carousel-container">
               <div class="carousel-track">
                 <div class="carousel-slide 1">
@@ -74,11 +86,11 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         <div class="carousal">
             <!-- <h2>Discover Global Flavors</h2> -->
         
-            <div class="flip" data-modal="africaModal">
+            <!-- <div class="flip" data-modal="africaModal">
                 <div class="flip-front">
                     <img src="images/africa.png" alt="Africa" loading="lazy">
                     <h3>Africa</h3>
@@ -107,10 +119,10 @@
                     <img src="images/australia.jpg" alt="Australia" loading="lazy">
                     <h3>Australia</h3>
                 </div>
-            </div>
+            </div> -->
         
             <!-- Modal for Africa -->
-            <div class="modal" id="africaModal">
+            <!-- <div class="modal" id="africaModal">
                 <div class="modal-content">
                     <span class="close" data-modal="africaModal">&times;</span>
                     <h3>Africa</h3>
@@ -118,9 +130,9 @@
                     <button>Learn More</button>
                 </div>
             </div>
-        
+         -->
             <!-- Modal for Asia -->
-            <div class="modal" id="asiaModal">
+            <!-- <div class="modal" id="asiaModal">
                 <div class="modal-content">
                     <span class="close" data-modal="asiaModal">&times;</span>
                     <h3>Asia</h3>
@@ -128,9 +140,9 @@
                     <button>Learn More</button>
                 </div>
             </div>
-        
+         -->
             <!-- Modal for Europe -->
-            <div class="modal" id="europeModal">
+            <!-- <div class="modal" id="europeModal">
                 <div class="modal-content">
                     <span class="close" data-modal="europeModal">&times;</span>
                     <h3>Europe</h3>
@@ -138,9 +150,9 @@
                     <button>Learn More</button>
                 </div>
             </div>
-        
+         -->
             <!-- Modal for America -->
-            <div class="modal" id="americaModal">
+            <!-- <div class="modal" id="americaModal">
                 <div class="modal-content">
                     <span class="close" data-modal="americaModal">&times;</span>
                     <h3>America</h3>
@@ -148,9 +160,9 @@
                     <button>Learn More</button>
                 </div>
             </div>
-        
+         -->
             <!-- Modal for Australia -->
-            <div class="modal" id="australiaModal">
+            <!-- <div class="modal" id="australiaModal">
                 <div class="modal-content">
                     <span class="close" data-modal="australiaModal">&times;</span>
                     <h3>Australia</h3>
@@ -158,8 +170,8 @@
                     <button>Learn More</button>
                 </div>
             </div>
-        </div>
-        <div>
+        </div> -->
+        <div class="taste">
             <section>
                 <img src="images/Nigeria-food.avif" alt="Nigeria food" loading="lazy">
             </section>

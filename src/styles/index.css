@@ -8,7 +8,7 @@ header {
   overflow: visible;
   padding: 22px;
   top: 0;
-  left:0%;
+  left:0;
   background:  #130c0c;
   position: relative;
   border-top-left-radius: 10px;
@@ -18,41 +18,41 @@ header {
   font-family: 'pacifico', cursive;
   font-size: 1.2rem;
   color: whitesmoke;
-  margin-left: 65px;
+  margin-left: 15vw;
   position: absolute;
-  top: 5px;
+  top: 1vh;
 }
 .menu-toggle {
   position: absolute;
-  margin-left: 3%;
+  margin-left: 1vw;
   font-size: 1.5rem;
   font-weight: bolder;
   color: whitesmoke;
   background: none;
   border: none;
-  top: 5px;
+  top: 3vh;
   cursor: pointer;
 }
 .search-button {
   position: absolute;
-  margin-left: 70%;
+  margin-left: 70vw;
   font-size: 1.2rem;
   font-weight: bolder;
   color: whitesmoke;
   background: none;
   border: none;
-  top: 5px;
+  top: 3vh;
   cursor: pointer;
 }
 .account-btn {
   position: absolute;
-  margin-left: 80%;
+  margin-left: 80vw;
   font-size: 1.2rem;
   font-weight: bolder;
   color: whitesmoke;
   background: none;
   border: none;
-  top: 5px;
+  top: 3vw;
   cursor: pointer;
 }
 #menu-toggle {
@@ -90,61 +90,427 @@ header {
   font-size: 1.rem;
   margin: 5px 0;
 }
-/* Navigation Menu Open State */
-/* #nav-links {
+
+#search-box {
+  position: absolute;
+  top: 18vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px;
+  width: 50%;
+  max-width: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.search-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* dropdown */
+/* Container positioning */
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
   display: none;
   position: absolute;
+  background-color: #130c0c;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-
-.menu-toggle.open {
-  content: ;
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
 }
-.nav-links {
+
+.dropdown-content a:hover {
+  background-color: #130c0c;
+}
+
+/* Toggle visibility on hover */
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: styling the toggle button */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.rem;
+  margin: 5px 0;
+}
+
+.taste {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #fefae0;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.taste section img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+  flex: 1;
+}
+
+.about-section h3 {
+  font-size: 2rem;
+  color: #6a4e2d;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  max-height: 8.5rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.about-section.expanded p {
+  max-height: 500px;
+}
+
+.about-section button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.about-section button:hover {
+  background-color: #a14f14;
+}
+
+/* Testimonial Section */
+.testimony {
+  background-color: #fff8f0;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  max-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  border-left: 6px solid #c08457;
+  border-radius: 12px;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.testimony img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c08457;
+}
+
+.testimony p {
+  font-size: 1rem;
+  color: #4b3832;
+  line-height: 1.6;
+}
+
+.testimony span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6b4d3c;
+}
+
+footer {
+  background:  #130c0c;
+  width: 100vw;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #333;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  color: #6a4e2d;
+  margin-bottom: 0.8rem;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul {
   list-style: none;
-
+  padding: 0;
 }
-Small devices (≥576px) */
-@media (min-width: 576px) {
-  /* Styles for small screens like larger phones */
 
-  body {
-    display: none;
+.footer-section ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: #d2691e;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.newsletter button {
+  padding: 0.7rem;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.social-icons a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icons a i {
+  margin-right: 0.5rem;
+}
+
+.social-icons a:hover {
+  color: #d2691e;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Responsive Styles */
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  .logo {
+    font-size: 1.4rem;
+    margin-left: 18vw;
+  }
+
+  .search-button,
+  .account-btn {
+    font-size: 1.3rem;
+  }
+
+  .taste {
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  .taste section img {
+    max-width: 380px;
+  }
+
+  .testimony {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
 /* Medium devices (≥768px) */
 @media (min-width: 768px) {
-  /* Styles for tablets */
+  header {
+    padding: 25px;
+  }
 
-  body {
-    display: none;
+  .logo {
+    font-size: 1.6rem;
+    margin-left: 10vw;
+  }
+
+  .menu-toggle {
+    font-size: 2rem;
+  }
+
+  .taste {
+    flex-direction: row;
+    padding: 4rem;
+  }
+
+  .about-section h3 {
+    font-size: 2.3rem;
+  }
+
+  .about-section p {
+    font-size: 1.15rem;
+  }
+
+  .testimony {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .social-icons {
+    flex-direction: row;
   }
 }
 
 /* Large devices (≥992px) */
 @media (min-width: 992px) {
-  /* Styles for desktops */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  body {
+  .logo {
+    position: static;
+    margin-left: 2rem;
+  }
+
+  .menu-toggle {
     display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  #nav-menu a {
+    margin: 0 1rem;
+    color: whitesmoke;
+  }
+
+  .search-button,
+  .account-btn {
+    position: static;
+    margin: 0 0.5rem;
+  }
+
+  #search-box {
+    top: 10vh;
+    width: 30%;
+  }
+
+  .taste section img {
+    max-width: 500px;
+  }
+
+  .about-section h3 {
+    font-size: 2.5rem;
+  }
+
+  .about-section p {
+    font-size: 1.2rem;
   }
 }
 
 /* Extra large devices (≥1200px) */
 @media (min-width: 1200px) {
-  /* Styles for large desktops */
+  .logo {
+    font-size: 2rem;
+  }
 
-  body {
-    display: none;
+  .taste {
+    gap: 3rem;
+    padding: 5rem;
+  }
+
+  .about-section h3 {
+    font-size: 2.8rem;
+  }
+
+  .testimony {
+    max-width: 1000px;
   }
 }
 
 /* Extra extra large devices (≥1400px) */
 @media (min-width: 1400px) {
-  /* Styles for very wide screens */
+  .taste section img {
+    max-width: 600px;
+  }
 
-  body {
-    display: none;
+  .about-section h3 {
+    font-size: 3rem;
+  }
+
+  .about-section p {
+    font-size: 1.25rem;
+  }
+
+  .testimony p {
+    font-size: 1.1rem;
   }
 }
